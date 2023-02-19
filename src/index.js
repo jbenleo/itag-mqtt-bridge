@@ -123,7 +123,7 @@ onNobleScanStop  = () => { log.info('NOBLE scanning stopped'); setTimeout(startS
 
 onNobleDiscover = (peripheral) =>{
     log.debug(`NOBLE discovered id: ${peripheral.id} localName: ${peripheral.advertisement.localName} state: ${peripheral.state}`)
-    is_itag             = peripheral.advertisement.localName == 'ITAG'
+    is_itag             = peripheral.advertisement.localName == 'iTAG'
     is_not_connected    = peripheral.state == 'disconnected'
     if(is_itag && is_not_connected){ connectITAG(peripheral) }
 }
